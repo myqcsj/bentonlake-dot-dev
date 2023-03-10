@@ -1,0 +1,12 @@
+Dockerfile
+.dockerignore
+node_modules
+README.md
+LICENSE
+.vscode
+.eslintrc
+.gitignore
+.prettierrc
+.next
+.git
+.turbo
