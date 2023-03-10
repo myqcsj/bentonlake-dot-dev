@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Benton Lake",
+  "short_name": "Benton L",
+  "start_url": ".",
+  "icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "description": "The personal website of Benton Lake, a prospective developer."
+}
