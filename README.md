@@ -1,5 +1,5 @@
 # BentonLake-Dot-Dev
-The personal website of Benton Lake. Developed with Next.JS and deployed automatically on Vercel. Available at [bentonlake.dev](https://www.bentonlake.dev).
+Developed with Next.JS and deployed automatically on Vercel. Available at [bentonlake.dev](https://www.bentonlake.dev).
 
 ## Stack
 * TypeScript
