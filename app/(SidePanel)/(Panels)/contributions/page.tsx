@@ -1,3 +1,3 @@
 export default function Contributions() {
-  return <></>;
+  return <>Contributions</>;
 }

@@ -1,3 +1,3 @@
 export default function Goals() {
-  return <></>;
+  return <>Goals</>;
 }
