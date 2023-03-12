@@ -33,8 +33,8 @@ export default function NavItem({
         <span className="font-thin">{innerText}</span>
 
         <div
-          className={`h-4 ml-60 flex justify-center items-center ${
-            isNavHovered ? 'absolute' : 'hidden'
+          className={`h-4 ml-60 flex justify-center items-center absolute transition-opacity ${
+            isNavHovered ? 'opacity-100' : 'opacity-0'
           }`}
         >
           <Image
