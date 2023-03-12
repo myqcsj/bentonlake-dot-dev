@@ -14,7 +14,7 @@ export default function BackgroundImage({
       src={src}
       alt={alt}
       fill
-      className={`object-cover object-center -z-10 fixed ${className}`}
+      className={`object-cover object-center -z-10 ${className}`}
       priority
     />
   );
