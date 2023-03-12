@@ -6,7 +6,7 @@ export default function HavePanelLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="w-2/5">
+    <main className="w-1/2">
       <SidePanel>{children}</SidePanel>
     </main>
   );

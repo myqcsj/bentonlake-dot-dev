@@ -16,7 +16,7 @@ export default function LocationDescriptionProvider({
   // this is required so that code with 'window' is only run on the client
   useEffect(() => {
     setLocationDescription({
-      prev: window.location.pathname,
+      prev: '/',
       curr: window.location.pathname,
     });
   }, []);
