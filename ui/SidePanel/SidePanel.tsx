@@ -21,25 +21,34 @@ export default function SidePanel({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (curr !== prev) {
       if (curr === '/') {
-        console.log('current is home');
+        // this causes the animation to replay, as the css properties are recomputed
         ref.current?.classList.remove('translate-x-10');
         ref.current?.offsetWidth;
       }
 
       if (prev === '/') {
-        console.log('prev was home');
+        // don't need to remove translations because they're already removed above
         ref.current?.classList.add('translate-x-10');
         ref.current?.offsetWidth;
       } else if (pageOrder.indexOf(curr) > pageOrder.indexOf(prev)) {
-        console.log('higher');
+        ref.current?.classList.remove('translate-x-10');
+        ref.current?.offsetWidth;
+        ref.current?.classList.add('-translate-y-10');
+        ref.current?.offsetWidth;
       } else {
-        console.log('lower');
+        ref.current?.classList.remove('translate-x-10');
+        ref.current?.offsetWidth;
+        ref.current?.classList.add('translate-y-10');
+        ref.current?.offsetWidth;
       }
     }
   }, [prev, curr]);
 
   return (
-    <div ref={ref} className="transition">
+    <div
+      ref={ref}
+      className="transition w-fit h-full rounded-l-3xl rounded-r-3xl bg-gradient-to-r from-orange-500 to-pink-600"
+    >
       {children}
     </div>
   );
