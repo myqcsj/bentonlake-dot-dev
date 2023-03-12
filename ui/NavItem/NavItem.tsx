@@ -30,7 +30,7 @@ export default function NavItem({
           setLocationDescription({ prev: window.location.pathname, curr: href })
         }
       >
-        <span className="font-thin">{innerText}</span>
+        <span className="font-normal">{innerText}</span>
 
         <div
           className={`h-4 ml-60 flex justify-center items-center absolute transition-opacity ${

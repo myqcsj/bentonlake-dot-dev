@@ -37,8 +37,11 @@ export default function SidePanel({ children }: { children: React.ReactNode }) {
   }, [prev, curr]);
 
   return (
-    <PanelSection refer={ref} className="duration-700 transition w-full h-full">
-      {children}
+    <PanelSection
+      refer={ref}
+      className="duration-700 transition w-full h-full p-6 font-thin"
+    >
+      <article>{children}</article>
     </PanelSection>
   );
 }

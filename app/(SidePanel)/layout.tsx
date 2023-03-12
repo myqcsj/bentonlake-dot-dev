@@ -29,7 +29,7 @@ export default function SidePanelLayout({
         <LocationDescriptionProvider>
           <PanelSection className="flex flex-col gap-4 items-center px-6">
             <Avatar src={me} alt="Benton Lake" size={288} priority />
-            <h1 className="text-4xl text-center font-thin">Benton Lake</h1>
+            <h1 className="text-4xl text-center font-bold">Benton Lake</h1>
             <NavBar>
               <NavItem href="/about" innerText="About me" />
               <NavItem href="/goals" innerText="My goals" />
