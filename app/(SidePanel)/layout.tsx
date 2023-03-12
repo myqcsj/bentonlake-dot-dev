@@ -1,8 +1,7 @@
 import Avatar from '@/ui/Avatar';
 import NavBar from '@/ui/NavBar';
 import NavItem from '@/ui/NavItem';
-import BackgroundImage from '@/ui/BackgroundImage';
-import SidePanel from '@/ui/SidePanel';
+import ContainerWithBackgroundImage from '@/ui/ContainerWithBackgroundImage';
 
 import { open_sans } from '@/lib/fonts';
 import LocationDescriptionProvider from '@/ui/AnimationDescriptionProvider';
@@ -21,11 +20,13 @@ export default function SidePanelLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className={`w-screen h-screen relative ${open_sans.className}`}>
-      <BackgroundImage src={layered_waves_1} alt="Pink and blue waves" />
+    <ContainerWithBackgroundImage
+      src={layered_waves_1}
+      className={open_sans.className}
+    >
       <div className="p-2 flex justify-center text-white">
         <LocationDescriptionProvider>
-          <section className="flex flex-col gap-4 items-center">
+          <section className="flex flex-col gap-4 items-center ">
             <Avatar src={me} alt="Benton Lake" size={288} priority />
             <h1 className="text-4xl text-center font-thin">Benton Lake</h1>
             <NavBar>
@@ -39,6 +40,6 @@ export default function SidePanelLayout({
           {children}
         </LocationDescriptionProvider>
       </div>
-    </div>
+    </ContainerWithBackgroundImage>
   );
 }
