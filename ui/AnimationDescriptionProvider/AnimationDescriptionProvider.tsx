@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { LocationDescriptionContext } from '@/lib/locationDescription';
 
 export default function LocationDescriptionProvider({
@@ -9,9 +9,17 @@ export default function LocationDescriptionProvider({
   children: React.ReactNode;
 }) {
   const [locationDescription, setLocationDescription] = useState({
-    prev: window.location.pathname,
-    curr: window.location.pathname,
+    prev: '',
+    curr: '',
   });
+
+  // this is required so that code with 'window' is only run on the client
+  useEffect(() => {
+    setLocationDescription({
+      prev: window.location.pathname,
+      curr: window.location.pathname,
+    });
+  }, []);
 
   return (
     <LocationDescriptionContext.Provider
