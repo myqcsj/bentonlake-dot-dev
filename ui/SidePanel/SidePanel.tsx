@@ -30,25 +30,28 @@ export default function SidePanel({ children }: { children: React.ReactNode }) {
         // don't need to remove translations because they're already removed above
         ref.current?.classList.add('translate-x-10');
         ref.current?.offsetWidth;
-      } else if (pageOrder.indexOf(curr) > pageOrder.indexOf(prev)) {
-        ref.current?.classList.remove('translate-x-10');
-        ref.current?.offsetWidth;
-        ref.current?.classList.add('-translate-y-10');
-        ref.current?.offsetWidth;
       } else {
-        ref.current?.classList.remove('translate-x-10');
+        ref.current?.classList.remove(
+          'translate-x-10',
+          'transition',
+          'opacity-100',
+          'duration-500' // for some reason this needs to be removed then added back or else it won't work
+        );
+        ref.current?.classList.add('opacity-0');
         ref.current?.offsetWidth;
-        ref.current?.classList.add('translate-y-10');
+        ref.current?.classList.add(
+          'translate-x-10',
+          'transition',
+          'opacity-100',
+          'duration-500'
+        );
         ref.current?.offsetWidth;
       }
     }
   }, [prev, curr]);
 
   return (
-    <div
-      ref={ref}
-      className="transition w-fit h-full rounded-l-3xl rounded-r-3xl bg-gradient-to-r from-orange-500 to-pink-600"
-    >
+    <div ref={ref} className="duration-500 transition w-full h-full">
       {children}
     </div>
   );

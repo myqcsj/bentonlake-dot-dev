@@ -36,9 +36,7 @@ export default function SidePanelLayout({
               <NavItem href="/contributions" innerText="Contributions" />
             </NavBar>
           </section>
-          <main>
-            <SidePanel>{children}</SidePanel>
-          </main>
+          {children}
         </LocationDescriptionProvider>
       </div>
     </div>
