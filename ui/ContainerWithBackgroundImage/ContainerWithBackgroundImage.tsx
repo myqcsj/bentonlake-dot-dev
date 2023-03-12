@@ -11,7 +11,7 @@ export default function ContainerWithBackgroundImage({
   className?: string;
 }) {
   return (
-    <div className={`w-screen h-screen relative ${className}`}>
+    <div className={`w-screen h-screen relative ${className ?? ''}`}>
       <BackgroundImage src={src} alt="Background image" />
       {children}
     </div>
