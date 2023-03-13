@@ -1,6 +1,6 @@
-import { Open_Sans } from 'next/font/google';
+import { Fira_Code } from 'next/font/google';
 
-export const open_sans = Open_Sans({
+export const fira_code = Fira_Code({
   subsets: ['latin'],
   display: 'swap',
-});
+}).className;
