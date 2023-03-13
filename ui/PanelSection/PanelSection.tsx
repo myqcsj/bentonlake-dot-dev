@@ -11,7 +11,7 @@ export default function PanelSection({
 }) {
   return (
     <section
-      className={`backdrop-blur-sm bg-slate-800/80 rounded-3xl p-3 ${
+      className={`backdrop-blur-sm bg-base/80 rounded-3xl p-3 ${
         className ?? ''
       }`}
       ref={refer}
