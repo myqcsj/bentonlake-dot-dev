@@ -3,47 +3,33 @@
 import { useState } from 'react';
 
 import Link from 'next/link';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
-import { useLocationDescriptionContext } from '@/lib/locationDescription';
-
-import chevron_right from '@/public/icons/chevron_right.svg';
+import { motion } from 'framer-motion';
 
 export default function NavItem({
   href,
-  innerText,
+  iconSrc,
+  name,
 }: {
   href: string;
-  innerText: string;
+  iconSrc: StaticImageData;
+  name: string;
 }) {
-  const [isNavHovered, setNavHover] = useState(false);
-  const { setLocationDescription } = useLocationDescriptionContext();
+  const [isHovered, setHover] = useState(false);
 
   return (
-    <li>
-      <Link
-        href={href}
-        className="pretty-border from-orange-500 to-pink-600 rounded-l-full rounded-r-full p-2 w-72 flex items-center justify-center transition hover:scale-110"
-        onMouseEnter={() => setNavHover(true)}
-        onMouseLeave={() => setNavHover(false)}
-        onClick={() =>
-          setLocationDescription({ prev: window.location.pathname, curr: href })
-        }
-      >
-        <span className="font-thin">{innerText}</span>
+    <Link
+      href={href}
+      className="flex items-center gap-3 h-5"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      <motion.div className="svg-light-gray">
+        <Image src={iconSrc} alt={name} width={16} height={16} />
+      </motion.div>
 
-        <div
-          className={`h-4 ml-60 flex justify-center items-center ${
-            isNavHovered ? 'absolute' : 'hidden'
-          }`}
-        >
-          <Image
-            src={chevron_right}
-            alt="Chevron pointing right"
-            className="invert"
-          />
-        </div>
-      </Link>
-    </li>
+      <p className="font-semibold text-xs text-gray-400">{name}</p>
+    </Link>
   );
 }

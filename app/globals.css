@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Workaround for coloring svgs https://codepen.io/sosuke/pen/Pjoqqp */
+  .svg-light-gray, .svg-hoverable > img {
+    filter: invert(75%) sepia(10%) saturate(321%) hue-rotate(179deg) brightness(85%) contrast(88%);
+  }
+  .svg-dark-gray, .svg-hoverable[data-ishovered="true"] > img {
+    filter: invert(12%) sepia(20%) saturate(1106%) hue-rotate(175deg) brightness(91%) contrast(89%);
+  }
+}

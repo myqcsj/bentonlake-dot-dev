@@ -1,6 +1,6 @@
-import { Open_Sans } from 'next/font/google';
+import { Raleway } from 'next/font/google';
 
-export const open_sans = Open_Sans({
+export const raleway = Raleway({
   subsets: ['latin'],
   display: 'swap',
 });

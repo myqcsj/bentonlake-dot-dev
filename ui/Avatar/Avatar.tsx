@@ -5,11 +5,13 @@ export default function Avatar({
   alt,
   size,
   priority,
+  className,
 }: {
   src: StaticImageData;
   alt: string;
   size: number;
   priority?: boolean | undefined;
+  className?: string | undefined;
 }) {
   return (
     <Image
@@ -17,7 +19,7 @@ export default function Avatar({
       alt={alt}
       width={size}
       height={size}
-      className="rounded-full"
+      className={`rounded-full${className ? ' ' + className : ''}`}
       priority={priority}
     />
   );
