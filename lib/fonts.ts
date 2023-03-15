@@ -1,6 +1,6 @@
-import { Fira_Code, Epilogue } from 'next/font/google';
+import { Roboto_Mono, Epilogue } from 'next/font/google';
 
-export const fira_code = Fira_Code({
+export const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
   display: 'swap',
 });

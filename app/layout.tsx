@@ -2,8 +2,9 @@ import './globals.css';
 
 import LocationContext from '@/ui/LocationContext';
 import NavBar from '@/ui/NavBar';
+import LineNumbers from '@/ui/LineNumbers';
 
-import { fira_code } from '@/lib/fonts';
+import { roboto_mono } from '@/lib/fonts';
 
 export const metadata = {
   description:
@@ -17,14 +18,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${fira_code.className} bg-white flex flex-col`}>
+      <body className={`${roboto_mono.className} bg-slate-800 flex flex-col`}>
         <LocationContext>
-          <header>
+          <header className="p-4">
             <NavBar />
           </header>
-          <div>
-            <section>{/* line numbers */}</section>
-            <main>{children}</main>
+          <div className="flex">
+            <section className="flex-none w-12">
+              <LineNumbers />
+            </section>
+            <main className="flex-grow">{children}</main>
           </div>
         </LocationContext>
       </body>

@@ -11,7 +11,7 @@ export default function NavBar() {
 
   // generates a nav for each path in the current location
   return (
-    <nav className={`flex gap-4 ${epilogue.className} p-4`}>
+    <nav className={`flex gap-4 ${epilogue.className}`}>
       {currentLocation.split('/').map((path, index) => {
         if (index !== 0 && path === '') return;
         else if (path === '')
