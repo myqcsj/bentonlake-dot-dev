@@ -17,6 +17,24 @@ export default function Home() {
        * <Contact>...</Contact>
        * </nav>
        */}
+      <CodeLine type="nav" importance={0}>
+        {'<nav>'}
+      </CodeLine>
+      <CodeLine type="component" importance={2}>
+        {'<Work />'}
+      </CodeLine>
+      <CodeLine type="component" importance={2}>
+        {'<Lab />'}
+      </CodeLine>
+      <CodeLine type="component" importance={2}>
+        {'<About />'}
+      </CodeLine>
+      <CodeLine type="component" importance={2}>
+        {'<Contact />'}
+      </CodeLine>
+      <CodeLine type="nav" importance={0}>
+        {'</nav>'}
+      </CodeLine>
     </>
   );
 }

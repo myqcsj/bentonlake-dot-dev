@@ -22,7 +22,7 @@ export default function RootLayout({
           <BentonLakeLogo />
         </header>
         <LocationContext>
-          <div className="p-4">{/*<BreadCrumbs />*/}</div>
+          {/*<BreadCrumbs />*/}
           <div className="flex">
             <section className="flex-none w-12">
               <LineNumbers />
