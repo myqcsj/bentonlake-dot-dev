@@ -1,10 +1,9 @@
 import './globals.css';
 
 import LocationContext from '@/ui/LocationContext';
-import NavBar from '@/ui/NavBar';
+import BreadCrumbs from '@/ui/BreadCrumbs';
 import LineNumbers from '@/ui/LineNumbers';
-
-import { roboto_mono } from '@/lib/fonts';
+import BentonLakeLogo from '@/ui/BentonLakeLogo';
 
 export const metadata = {
   description:
@@ -18,11 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto_mono.className} bg-slate-800 flex flex-col`}>
+      <body className="bg-black flex flex-col">
+        <header className="p-4">
+          <BentonLakeLogo />
+        </header>
         <LocationContext>
-          <header className="p-4">
-            <NavBar />
-          </header>
+          <div className="p-4">{/*<BreadCrumbs />*/}</div>
           <div className="flex">
             <section className="flex-none w-12">
               <LineNumbers />

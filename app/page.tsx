@@ -7,7 +7,16 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <CodeLine component>{'<BentonLake />'}</CodeLine>
+      {/**
+       * <BentonLake />
+       * <BreadCrumbs />
+       * <nav>
+       * <Work>...</Work>
+       * <Lab>...</Lab>
+       * <About>...</About>
+       * <Contact>...</Contact>
+       * </nav>
+       */}
     </>
   );
 }
