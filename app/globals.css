@@ -1,9 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer utilities {
-  .halo-amber {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px theme(colors.amber.400), 0 0 40px theme(colors.amber.400), 0 0 50px theme(colors.amber.200), 0 0 60px theme(colors.amber.200);
-  }
-}

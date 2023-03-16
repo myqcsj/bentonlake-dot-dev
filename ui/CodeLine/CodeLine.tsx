@@ -2,34 +2,37 @@
 
 import cx from 'classnames';
 
+import { motion } from 'framer-motion';
+
 export default function CodeLine({
   children,
-  type,
-  importance,
+  important,
+  component,
 }: {
   children?: React.ReactNode;
-  type: 'nav' | 'component';
-  importance: 0 | 1 | 2 | 3;
+  important?: boolean | undefined;
+  component?: boolean | undefined;
 }) {
-  const nav = type === 'nav';
-  const component = type === 'component';
-
-  const classname = cx('text-gray-700', {
-    'text-red-700': nav,
-    'text-yellow-500': component,
-  });
-
-  switch (importance) {
-    case 0:
-      return <p className={classname}>{children}</p>;
-    case 1:
-      return <h1 className={classname}>{children}</h1>;
-    case 2:
-      return <h2 className={classname}>{children}</h2>;
-    case 3:
-      return <h3 className={classname}>{children}</h3>;
-
-    default:
-      return <></>;
+  if (important) {
+    return (
+      <motion.h1
+        className="font-extrabold flex items-center w-fit"
+        initial={false}
+        animate={{ opacity: 0.4 }}
+        whileHover={{
+          opacity: 1,
+          scale: 1.1,
+          x: 50,
+          transition: { duration: 0.2, ease: 'easeInOut' },
+        }}
+        transition={{ duration: 0.6, ease: 'easeInOut' }}
+      >
+        <span className="text-gray-500 text-6xl">&lt;</span>
+        <span className="text-gray-100 text-8xl">{children}</span>
+        <span className="text-gray-500 text-6xl">/&gt;</span>
+      </motion.h1>
+    );
+  } else {
+    return <p className="text-gray-600/60 font-bold text-2xl">{children}</p>;
   }
 }

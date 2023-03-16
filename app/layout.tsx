@@ -1,9 +1,8 @@
 import './globals.css';
 
-import LocationContext from '@/ui/LocationContext';
-import BreadCrumbs from '@/ui/BreadCrumbs';
-import LineNumbers from '@/ui/LineNumbers';
 import BentonLakeLogo from '@/ui/BentonLakeLogo';
+
+import { source_code_pro } from '@/lib/fonts';
 
 export const metadata = {
   description:
@@ -17,19 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black flex flex-col">
-        <header className="p-4">
+      <body className="bg-black flex flex-col p-4">
+        <header className="flex justify-between">
           <BentonLakeLogo />
         </header>
-        <LocationContext>
-          {/*<BreadCrumbs />*/}
-          <div className="flex">
-            <section className="flex-none w-12">
-              <LineNumbers />
-            </section>
-            <main className="flex-grow">{children}</main>
-          </div>
-        </LocationContext>
+        <main className={`flex flex-col ${source_code_pro.className}`}>
+          {children}
+        </main>
       </body>
     </html>
   );

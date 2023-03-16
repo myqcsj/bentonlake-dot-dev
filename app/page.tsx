@@ -7,34 +7,20 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      {/**
-       * <BentonLake />
-       * <BreadCrumbs />
-       * <nav>
-       * <Work>...</Work>
-       * <Lab>...</Lab>
-       * <About>...</About>
-       * <Contact>...</Contact>
-       * </nav>
-       */}
-      <CodeLine type="nav" importance={0}>
-        {'<nav>'}
+      <CodeLine>{'<nav>'}</CodeLine>
+      <CodeLine important component>
+        Story
       </CodeLine>
-      <CodeLine type="component" importance={2}>
-        {'<Work />'}
+      <CodeLine important component>
+        Wisdom
       </CodeLine>
-      <CodeLine type="component" importance={2}>
-        {'<Lab />'}
+      <CodeLine important component>
+        Creations
       </CodeLine>
-      <CodeLine type="component" importance={2}>
-        {'<About />'}
+      <CodeLine important component>
+        Message
       </CodeLine>
-      <CodeLine type="component" importance={2}>
-        {'<Contact />'}
-      </CodeLine>
-      <CodeLine type="nav" importance={0}>
-        {'</nav>'}
-      </CodeLine>
+      <CodeLine>{'</nav>'}</CodeLine>
     </>
   );
 }
