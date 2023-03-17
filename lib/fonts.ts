@@ -8,4 +8,4 @@ export const major_mono_display = Major_Mono_Display({
 export const montserrat = Montserrat({
   subsets: ['latin'],
   display: 'swap'
-})
+});

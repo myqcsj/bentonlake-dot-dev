@@ -1,5 +1,7 @@
 import './globals.css';
 
+import Link from 'next/link';
+
 import BentonLakeLogo from '@/ui/BentonLakeLogo';
 import NavItem from '@/ui/NavItem';
 
@@ -17,17 +19,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-black flex flex-col p-4 ${montserrat.className}`}>
+      <body
+        className={`bg-black flex flex-col p-4 h-screen ${montserrat.className}`}
+      >
         <header className="flex items-center justify-between">
-          <BentonLakeLogo />
+          <Link href="/">
+            <BentonLakeLogo />
+          </Link>
           <nav className="flex items-center gap-4">
-            <NavItem text="Story" href="/story" />
-            <NavItem text="Wisdom" href="/wisdom" />
-            <NavItem text="Creations" href="/creations" />
+            <NavItem text="About" href="/about" />
+            <NavItem text="Future" href="/future" />
+            <NavItem text="Work" href="/work" />
             <NavItem text="Contact" href="/contact" />
           </nav>
         </header>
-        <main className="flex flex-col">{children}</main>
+        <main className="h-full text-white">{children}</main>
       </body>
     </html>
   );

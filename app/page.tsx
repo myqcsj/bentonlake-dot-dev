@@ -1,4 +1,6 @@
-import CodeLine from '@/ui/CodeLine';
+import Link from 'next/link';
+
+import AnimatedRainbowText from '@/ui/AnimatedRainbowText';
 
 export const metadata = {
   title: '<BentonLake /> | Developer-in-Training',
@@ -6,21 +8,13 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <>
-      <CodeLine>{'<nav>'}</CodeLine>
-      <CodeLine important component>
-        Story
-      </CodeLine>
-      <CodeLine important component>
-        Wisdom
-      </CodeLine>
-      <CodeLine important component>
-        Creations
-      </CodeLine>
-      <CodeLine important component>
-        Message
-      </CodeLine>
-      <CodeLine>{'</nav>'}</CodeLine>
-    </>
+    <div className="flex flex-col mt-32 items-center">
+      <h1 className="flex items-center gap-3 text-4xl">
+        <span>I&apos;m Benton Lake and I want to build the </span>
+        <Link href="/future" className="font-bold">
+          <AnimatedRainbowText text="future" />
+        </Link>
+      </h1>
+    </div>
   );
 }
