@@ -19,7 +19,7 @@ export default function Home() {
       <section className="flex gap-6">
         <ImportantLink href="/contact" text="Get in Touch" />
         <ImportantLink
-          href="/public/resume.pdf"
+          href="/files/resume.pdf"
           text="Download my Resume"
           prefetch={false}
           download={true}

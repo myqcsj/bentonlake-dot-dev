@@ -28,8 +28,8 @@ export default function RootLayout({
           </Link>
           <nav className="flex items-center gap-4">
             <NavItem text="About" href="/about" />
-            <NavItem text="Future" href="/future" />
             <NavItem text="Work" href="/work" />
+            <NavItem text="Projects" href="/projects" />
             <NavItem text="Contact" href="/contact" />
           </nav>
         </header>
